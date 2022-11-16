@@ -15,7 +15,8 @@
     "preshow:doc": "npm run doc",
     "show:doc": "live-server doc",
     "preshow:dist": "npm run build",
-    "show:dist": "live-server dist"
+    "show:dist": "live-server dist",
+    "serve": "live-server ./src"
   },
   "author": "artem",
   "license": "MIT",

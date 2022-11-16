@@ -1,7 +1,9 @@
 const displayOnClick = document.querySelector('.btn');
 const hiddenOn = document.querySelector('.hidden');
 
-displayOnClick.onclick = function f() {
+function funcClick() {
   hiddenOn.classList.toggle('elem');
   displayOnClick.classList.toggle('borderColor');
-};
+}
+
+displayOnClick.onclick = funcClick;
