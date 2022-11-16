@@ -1,0 +1,110 @@
+/*body {
+  box-sizing: border-box;  
+  margin: 100px 50px;
+}
+
+.btn {
+  background: #dc3545;
+  border: #dc3545;
+  padding: 13px 18px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+*/
+
+/* задаем относительное позиционирование контейнеру */
+.block {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  justify-content: center;
+}
+
+.btn {
+  background: #dc3545;
+  border: #dc3545;
+  padding: 13px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.btn:hover {
+  background: #bd2130;
+}
+
+/* Оформление скрытого элемента по умолчанию */ 
+.hidden {
+  display: block;
+  position: absolute;
+  bottom: 55px;
+  font-family: sans-serif;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 6px;
+}
+
+/* Дополнительное оформление скрытого элемента(необязательно) */
+.btn + .hidden:before {
+  content: " ";
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  height: 0;
+  width: 0;
+  border: 8px solid transparent;
+  border-color: #fff transparent transparent transparent;
+  z-index: 2;
+}
+/* Дополнительное оформление скрытого элемента(необязательно) */
+.btn + .hidden:after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border: 8px solid transparent;
+  border-color: rgba(0,0,0,.16) transparent transparent transparent;
+  z-index: 1;
+}
+/* Появление скрытого элемента при клике */
+/*.btn:focus + .hidden {
+  display: block;
+}*/
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.title {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  font-weight: 550;
+}
+
+.slogan {
+  padding: 0.5rem 0.75rem;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.elem {
+  display: none;
+}
+
+.borderColor {
+  box-shadow: 0 0 0 0.2rem rgb(225 83 97 / 50%);
+}
