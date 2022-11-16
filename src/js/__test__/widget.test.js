@@ -1,6 +1,6 @@
 import funcClick from '../app';
 
-console.log(funcClick);
+// console.log(funcClick);
 // test('widget', () => {
 //   document.body.innerHTML = '<div class="container"></div>';
 
