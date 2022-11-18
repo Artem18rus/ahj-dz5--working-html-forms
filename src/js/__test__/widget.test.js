@@ -1,13 +1,15 @@
-import funcClick from '../app';
+import ClassClick from '../app';
+// import displayOnClick from '../app';
+// import hiddenOn from '../app';
 
-// console.log(funcClick);
-// test('widget', () => {
-//   document.body.innerHTML = '<div class="container"></div>';
+test('widget', () => {
+  document.body.innerHTML = '<div class="container"></div>';
 
-//   const container = document.querySelector('.container');
-//   const widget = new InnFormWidget(container);
+  const container = document.querySelector('.container');
+  const widget = ClassClick.displayOnClickMethod();
 
-//   widget.bindToDOM();
+  widget.bindToDOM();
+  widget.displayOnClick.click();
 
-//   expect(container.innerHTML).toEqual(InnFormWidget.markup);
-// })
+  expect(widget.container.classList.contains('hidden')).toEqual(true);
+});

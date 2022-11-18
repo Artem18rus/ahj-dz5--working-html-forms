@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Без описания",
   "main": "index.js",
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "scripts": {
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint .",
-    "test": "jest --passWithNoTests",
+    "test": "jest --testPathPattern=./src/",
     "coverage": "jest --coverage",
     "doc": "jsdoc -c jsdoc.conf.json",
     "preshow:coverage": "npm run coverage",
@@ -32,8 +35,10 @@
     "eslint-plugin-import": "^2.22.1",
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^5.5.0",
+    "jest-environment-jsdom": "^29.3.1",
     "live-server": "^1.1.0",
     "mini-css-extract-plugin": "^1.3.3",
+    "puppeteer": "^19.2.2",
     "push-dir": "^0.4.1",
     "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.11.1",
