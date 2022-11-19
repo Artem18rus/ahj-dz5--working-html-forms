@@ -1,5 +1,4 @@
-import { InnPopoverWidget } from '../widget';
-
+import InnPopoverWidget from '../widget';
 
 test('widget', () => {
   document.body.innerHTML = '<div class="container"></div>';

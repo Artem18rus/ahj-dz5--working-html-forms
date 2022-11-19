@@ -1,6 +1,4 @@
-//console.log('sdfsdfsdf')
-
-export class InnPopoverWidget {
+export default class InnPopoverWidget {
   constructor(parentEl) {
     this.parentEl = parentEl;
 
@@ -35,11 +33,10 @@ export class InnPopoverWidget {
   onClick(e) {
     e.preventDefault();
 
-    const displayOnClick = document.querySelector('.btn');
-    const hiddenOn = document.querySelector('.hidden');
+    this.displayOnClick = document.querySelector('.btn');
+    this.hiddenOn = document.querySelector('.hidden');
 
-    hiddenOn.classList.toggle('elem');
-    displayOnClick.classList.toggle('borderColor');
+    this.hiddenOn.classList.toggle('elem');
+    this.displayOnClick.classList.toggle('borderColor');
   }
-
 }
