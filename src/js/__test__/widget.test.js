@@ -1,15 +1,13 @@
-import ClassClick from '../app';
-// import displayOnClick from '../app';
-// import hiddenOn from '../app';
+import { InnPopoverWidget } from '../widget';
+
 
 test('widget', () => {
   document.body.innerHTML = '<div class="container"></div>';
 
-  //const container = document.querySelector('.container');
-  const widget = ClassClick.displayOnClickMethod();
+  const container = document.querySelector('.container');
+  const widget = new InnPopoverWidget(container);
 
   widget.bindToDOM();
-  widget.displayOnClick.click();
 
-  expect(widget.container.classList.contains('hidden')).toEqual(true);
+  expect(container.innerHTML).toEqual(InnPopoverWidget.markup);
 });

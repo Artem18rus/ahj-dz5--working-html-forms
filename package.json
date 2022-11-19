@@ -19,7 +19,8 @@
     "show:doc": "live-server doc",
     "preshow:dist": "npm run build",
     "show:dist": "live-server dist",
-    "serve": "live-server ./src"
+    "serve": "live-server ./src",
+    "e2e": "jest --testPathPattern=./e2e/ --runInBand"
   },
   "author": "artem",
   "license": "MIT",
