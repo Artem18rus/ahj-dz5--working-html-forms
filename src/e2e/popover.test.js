@@ -10,7 +10,6 @@ describe('Inn Popover', () => {
       headless: true,
       slowMo: 100,
       args: ['--no-sandbox', "--disabled-setupid-sandbox"],
-      ignoreDefaultArgs: ['--disable-extensions'],
     });
 
     page = await browser.newPage();
