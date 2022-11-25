@@ -9,7 +9,6 @@ describe('Inn Popover', () => {
     browser = await puppeteer.launch({
       headless: true,
       slowMo: 100,
-      devtools: true,
       args: ["--no-sandbox"],
     });
 
