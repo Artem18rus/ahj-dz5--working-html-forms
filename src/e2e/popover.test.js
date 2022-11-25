@@ -7,9 +7,9 @@ describe('Inn Popover', () => {
 
   beforeEach(async () => {
     browser = await puppeteer.launch({
-      headless: true,
+      headless: false,
       slowMo: 100,
-      args: ['--no-sandbox'],
+      devtools: true,
     });
 
     page = await browser.newPage();
