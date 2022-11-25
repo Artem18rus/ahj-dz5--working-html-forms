@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-describe('Inn Form', () => {
+describe('Inn Popover', () => {
   let browser;
   let page;
 
@@ -14,24 +14,24 @@ describe('Inn Form', () => {
     page = await browser.newPage();
   });
 
-  test('start', async () => {
+  test('blockIn', async () => {
     await page.goto('http://localhost:9000');
 
-    await page.waitFor('.block');
+    await page.waitForTimeout('.block');
   });
 
-  test('valid', async () => {
+  test('clickPopover', async () => {
     jest.setTimeout(20000);
     await page.goto('http://localhost:9000');
 
-    await page.waitFor('.block');
+    await page.waitForTimeout('.block');
 
-    const form = await page.$('.block');
-    const btn = await form.$('.btn');
+    const ppov = await page.$('.block');
+    const btn = await ppov.$('.btn');
 
     await btn.click();
 
-    await page.waitFor('.block .click.valid');
+    await page.waitForTimeout('.block .click.valid');
   });
 
   afterEach(async () => {

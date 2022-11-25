@@ -17,7 +17,7 @@ describe('Page start', () => {
   test('test', async () => {
     await page.goto('http://localhost:9000');
 
-    await page.waitFor('body');
+    await page.waitForTimeout('body');
   });
 
   afterEach(async () => {
