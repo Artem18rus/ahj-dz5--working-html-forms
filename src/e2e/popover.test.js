@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import puppeteer from 'puppeteer';
 
 describe('Inn Popover', () => {
@@ -6,9 +7,10 @@ describe('Inn Popover', () => {
 
   beforeEach(async () => {
     browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       slowMo: 100,
       devtools: true,
+      args: ["--no-sandbox"],
     });
 
     page = await browser.newPage();
