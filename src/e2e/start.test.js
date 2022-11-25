@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import puppeteer from 'puppeteer';
 
 describe('Page start', () => {
@@ -8,7 +9,8 @@ describe('Page start', () => {
     browser = await puppeteer.launch({
       headless: true,
       slowMo: 100,
-      args: ['--no-sandbox'],
+      args: ['--no-sandbox', "--disabled-setupid-sandbox"],
+      ignoreDefaultArgs: ['--disable-extensions'],
     });
 
     page = await browser.newPage();
