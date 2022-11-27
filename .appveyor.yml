@@ -17,7 +17,7 @@ build_script:
   - npm run build   # команда сборки
 
 test_script:
-  - npm run lint && npm test  # скрипт тестирования
+  - yarn start & ./checkConnection.bash http://localhost:9000 && yarn run lint && yarn run test && kill %1  # скрипт тестирования
 
 deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
